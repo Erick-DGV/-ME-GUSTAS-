@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tan feo soy?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .btn {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .btn a {
+            margin: 0 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn a:hover {
+            background-color: #0056b3;
+        }
+        h1 {
+            margin-bottom: 15px;
+        }
+        #btn-random {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 15px;
+            background-color: #dc3545; /* Color para el botón NO */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        #btn-random:hover {
+            background-color: #c82333; /* Color de hover para el botón NO */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tenor-gif-embed" data-postid="17946883" data-share-method="host" data-aspect-ratio="1.23552" data-width="100%">
+            <a href="https://tenor.com/view/mochi-mochi-peach-cat-tap-butt-cute-butt-taps-back-pats-gif-17946883">Mochi Mochi Peach Cat Tap Butt Sticker</a> from 
+            <a href="https://tenor.com/search/mochi+mochi+peach+cat-stickers">Mochi Mochi Peach Cat Stickers</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <h1>Vamos a salir por las buenas o por las malas, ¿Entendido? 😊</h1>
+        <div class="btn">
+            <a href="Así sí me gusta!.html">SI</a>
+            <a href="#" id="btn-random">NO</a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('btn-random').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevenir el comportamiento por defecto del enlace
+            // Obtener el tamaño de la ventana
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            // Calcular nuevas posiciones aleatorias
+            const randomX = Math.random() * (windowWidth - 100); // Ajustar 100 para el ancho del botón
+            const randomY = Math.random() * (windowHeight - 50); // Ajustar 50 para el alto del botón
+            // Mover el botón a la nueva posición
+            this.style.left = randomX + 'px';
+            this.style.top = randomY + 'px';
+            this.style.position = 'absolute';
+        });
+    </script>
+</body>
+
+</html>
+
